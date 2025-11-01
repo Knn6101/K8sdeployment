@@ -12,5 +12,5 @@ phases:
      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin 408421298729.dkr.ecr.ap-south-1.amazonaws.com
      - docker build -t webapp .
      - docker tag webapp:latest $ECR_REPO/webapp:latest
-     - docker push $ECR_REPO/webapp:latest
+     - docker push 408421298729.dkr.ecr.ap-south-1.amazonaws.com/webapp:latest
      - echo Image build and push completed
